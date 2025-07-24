@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "berrydev-mcp-servers": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@berrydev-ai/mcp-servers"
+      ],
+      "env": {}
+    }
+  }
+}

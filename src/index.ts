@@ -1,24 +1,19 @@
 #!/usr/bin/env node
 
 import { FastMCP } from "fastmcp";
-import { z } from "zod"; // Or any validation library that supports Standard Schema
+import { registerTiktokenTools } from "./tools/tiktoken.js";
+import { registerGetTokenCountForTextPrompt } from "./prompts/token-count.js";
 
 const server = new FastMCP({
-  name: "My Server",
+  name: "berrydev-ai-mcp-servers",
   version: "1.0.0",
 });
 
-server.addTool({
-  name: "add",
-  description: "Add two numbers",
-  parameters: z.object({
-    a: z.number(),
-    b: z.number(),
-  }),
-  execute: async (args) => {
-    return String(args.a + args.b);
-  },
-});
+// Register tools
+registerTiktokenTools(server);
+
+// Register prompts
+registerGetTokenCountForTextPrompt(server);
 
 server.start({
   transportType: "stdio",

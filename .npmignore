@@ -1,0 +1,64 @@
+# Source files
+src/
+*.ts
+!*.d.ts
+
+# Development files
+.vscode/
+.github/
+eslint.config.js
+.prettierrc.js
+.prettierignore
+tsconfig.json
+
+# Test files
+**/*.test.*
+**/*.spec.*
+coverage/
+
+# Build artifacts
+*.tsbuildinfo
+
+# Development dependencies
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# IDE files
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+
+# Package files
+*.tgz
+*.tar.gz
+
+# Example config file (users should create their own)
+claude-desktop-config.json
