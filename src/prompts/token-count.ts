@@ -11,7 +11,7 @@ export const registerGetTokenCountForTextPrompt = (server: FastMCP) => {
       },
     ],
     load: async args => {
-      return `Count the number of tokens for the following text: <text>${args.text}</text>`;
+      return `Count the number of tokens in this text:\n\n${args.text}`;
     },
   });
 };
