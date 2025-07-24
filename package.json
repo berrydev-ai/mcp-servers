@@ -1,0 +1,27 @@
+{
+  "name": "@berrydev-ai/mcp-servers",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Collection of MCP servers for personal use",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "inspector": "npx @modelcontextprotocol/inspector node dist/index.js",
+    "mcp-cli": "npx fastmcp inspect src/index.ts",
+    "test": "vitest run"
+  },
+  "author": "Eric Berry (eric@berrydev.ai)",
+  "license": "MIT",
+  "dependencies": {
+    "fastmcp": "^3.10.0",
+    "js-tiktoken": "^1.0.20",
+    "zod": "^4.0.8"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}
